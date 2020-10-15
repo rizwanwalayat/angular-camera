@@ -1,0 +1,12 @@
+{
+    "navbar": {
+        "Camera": "Camera",
+        "Reporting": "Reporting",
+        "Settings": "Settings",
+        "Welcome": "Welcome",
+        "Language": "Settings",
+        "Logout": "Logout"
+    },
+    "Pass": "Pass",
+    "Fail": "Fail"
+}

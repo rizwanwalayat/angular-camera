@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuardService as AuthGuard } from './modules/auth/auth.guard';
 import { LayoutComponent } from './layout/layout.component';
+import { LayoutRoutes } from './layout/layout.routes';
 
 const routes: Routes = [
 
@@ -9,6 +10,7 @@ const routes: Routes = [
   // { path: '',   redirectTo: '/camera', pathMatch: 'full' , canActivate: [AuthGuard]}
   {
     path: '',
+    children: LayoutRoutes,
     component: LayoutComponent,
     canActivate: [AuthGuard]
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-camera',
@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./camera.component.scss']
 })
 export class CameraComponent implements OnInit {
-
-  constructor() { }
+  
+  @Input('camera')
+  camera;
+  
+  constructor() {}
 
   ngOnInit(): void {
   }

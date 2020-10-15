@@ -1,0 +1,12 @@
+{
+    "navbar": {
+        "Camera": "الة تصوير",
+        "Reporting": "التقارير",
+        "Settings": "إعدادات",
+        "Welcome": "أهلا بك",
+        "Language": "لغة",
+        "Logout": "تسجيل خروج"
+    },
+    "Pass": "نجح",
+    "Fail": "فشل"
+}

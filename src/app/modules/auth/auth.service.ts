@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   public isAuthenticated(): boolean{
     const isLoggedIn = localStorage.getItem('isLoggedIn');
@@ -16,6 +17,7 @@ export class AuthService {
   public login(username: string, password: string){
     if (username == 'admin' && password == 'admin'){
       localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('user', username);
       return true;
     }
     else{
@@ -25,5 +27,6 @@ export class AuthService {
 
   public logout(){
     localStorage.removeItem('isLoggedIn');
+    this.router.navigate(['auth/login']);
   }
 }

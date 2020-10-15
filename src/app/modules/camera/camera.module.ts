@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CameraRoutingModule } from './camera-routing.module';
 import { CameraComponent } from './camera/camera.component';
 import { CameraListComponent } from './camera-list/camera-list.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { SharedModule } from '@shared/shared.module';
 
 
 

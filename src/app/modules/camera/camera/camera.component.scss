@@ -1,0 +1,19 @@
+.card { 
+    position: relative; 
+    width: 100%; /* for IE 6 */
+ }
+ 
+ .badge { 
+    position: absolute; 
+    top: 1em; 
+    right: 1em; 
+    width: 50px;
+    // width: 100%; 
+ }
+
+ .card-img-top{
+    height: 15em;
+    object-fit: cover;
+ }
+
+ 

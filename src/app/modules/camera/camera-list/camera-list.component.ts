@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CameraService } from '../camera.service';
 
 @Component({
   selector: 'app-camera-list',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CameraListComponent implements OnInit {
 
-  constructor() { }
+  cameras = [];
+  constructor(private cameraService: CameraService) { }
 
   ngOnInit(): void {
+    
+    this.cameraService.getCameraImages().subscribe(camerasList => {
+      let {cameras} = camerasList
+      this.cameras = cameras;
+    });
   }
 
 }

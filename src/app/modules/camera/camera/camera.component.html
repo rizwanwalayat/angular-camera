@@ -1,1 +1,8 @@
-<p>camera works!</p>
+<div class="card my-2" style="width: 18rem;">
+    <h5><span class="badge badge-success" *ngIf="camera.isPassed; else elseBlock">{{'Pass' | translate}}</span> <ng-template #elseBlock> <span class="badge badge-danger">{{'Fail' | translate}}</span></ng-template></h5>
+    <img [src]="camera.imagePath" class="card-img-top" alt="image">
+    <div class="card-body">
+      <h5 class="card-title">{{camera.cameraName}}</h5>
+    
+    </div>
+  </div>

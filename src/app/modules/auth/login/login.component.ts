@@ -10,8 +10,9 @@ import { AuthService } from '../auth.service'
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  username = new FormControl('');
-  password = new FormControl('');
+  username:string;
+  password:string;
+  error:boolean=false;
   constructor(
     private authService: AuthService,
     private router: Router
@@ -22,11 +23,14 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    let loggedIn = this.authService.login('admin', 'admin');
+    let loggedIn = this.authService.login(this.username, this.password);
 
     if(loggedIn){
       console.log('Inside Login , redirecting to camera')
-      this.router.navigate['']
+      this.router.navigate(['/camera'])
+    }
+    else{
+      this.error=true;
     }
   }
 
