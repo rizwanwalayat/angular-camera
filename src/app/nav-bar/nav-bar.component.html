@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
     <a class="navbar-brand" routerLink="/">Camera App</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -6,16 +6,17 @@
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item " routerLinkActive="active">
         
-          <a class="nav-link" routerLink="/camera">{{'navbar.Camera' | translate}} <span class="sr-only">(current)</span></a>
+          <a class="nav-link" routerLink="/camera" >{{'navbar.Cameras' | translate}} <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" >{{'navbar.Reporting' | translate}}</a>
+        <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/report" >{{'navbar.Reporting' | translate}}</a>
           </li> 
-          <li class="nav-item">
-            <a class="nav-link" >{{'navbar.Settings' | translate}}</a>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/settings" >{{'navbar.Settings' | translate}}</a>
           </li>
+    
       </ul>
       <ul class="navbar-nav">
       <li class="nav-item mr-3">

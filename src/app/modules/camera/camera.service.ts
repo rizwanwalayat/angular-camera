@@ -18,7 +18,7 @@ export class CameraService {
   generateRandomImageResponse(){
     let cameras = []
     //let randomNumber = Math.floor(Math.random() * 3) + 1; //return number from 1 to 3
-    let cameraCount = 10;//Math.floor(Math.random() * 50) + 25; //return number from 25 to 75
+    let cameraCount = 12;//Math.floor(Math.random() * 50) + 25; //return number from 25 to 75
 
     for(let i = 1; i<= cameraCount; i++){
       cameras.push({

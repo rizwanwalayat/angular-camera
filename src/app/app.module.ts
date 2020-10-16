@@ -8,9 +8,13 @@ import { SharedModule } from './shared/shared.module';
 import { CameraModule } from './modules/camera/camera.module';
 import { LayoutComponent } from './layout/layout.component';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateModule, TranslateLoader, TranslatePipe} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
+import { ReportsComponent } from './reports/reports.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { SettingsComponent } from './settings/settings.component';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -19,7 +23,10 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent
+    LayoutComponent,
+    ReportsComponent,
+    NavBarComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

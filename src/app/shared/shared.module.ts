@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import {TranslateModule, TranslateService, TranslatePipe} from '@ngx-translate/core';
 
 
 @NgModule({
-  declarations: [NavbarComponent],
+  declarations: [],
   imports: [
     CommonModule,
     TranslateModule
   ],
-  exports: [NavbarComponent, TranslateModule]
+  exports: [TranslateModule]
 })
 export class SharedModule {
   constructor(public translate: TranslateService){

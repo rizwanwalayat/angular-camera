@@ -3,19 +3,20 @@ import { AuthService } from '@auth/auth.service';
 import {TranslateService, TranslatePipe} from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  selector: 'app-nav-bar',
+  templateUrl: './nav-bar.component.html',
+  styleUrls: ['./nav-bar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavBarComponent  implements OnInit {
   user: string = localStorage.getItem('user');
+  navColor: "navbar-light bg-light";
   constructor(private authService:AuthService, public translate: TranslateService) { 
     translate.setDefaultLang('en');
     translate.use('en');
   }
 
   ngOnInit(): void {
-    console.log('Navbar Component')
+    console.log(' new Navbar Component')
   }
 
   logout(){
